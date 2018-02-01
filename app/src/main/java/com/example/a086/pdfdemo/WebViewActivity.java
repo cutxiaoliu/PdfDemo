@@ -29,14 +29,12 @@ import java.util.Base64;
 
 public class WebViewActivity extends AppCompatActivity {
     WebView pdfViewerWeb;
-    private String docPath="compressed.tracemonkey-pldi-09.pdf";
     private String downloadUrl="http://119.23.25.170:8088/api/invoice/18770055726-1516342350283.pdf";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
         pdfViewerWeb=findViewById(R.id.webview);
-        String path = getIntent().getStringExtra("path");
 
         WebSettings settings = pdfViewerWeb.getSettings();
         settings.setSavePassword(false);
