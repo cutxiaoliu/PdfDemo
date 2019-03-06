@@ -4,10 +4,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -18,10 +15,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Base64;
 
 /**
  * Created by 086 on 2018/1/25.
@@ -29,7 +24,8 @@ import java.util.Base64;
 
 public class WebViewActivity extends AppCompatActivity {
     WebView pdfViewerWeb;
-    private String downloadUrl="http://119.23.25.170:8088/api/invoice/18770055726-1516342350283.pdf";
+//    private String downloadUrl="http://file.chmsp.com.cn/colligate/file/00100000224821.pdf";
+    private String downloadUrl="http://wyyt-test.oss-cn-huhehaote.aliyuncs.com/wyyt-doc/2019/01/03/null_jf3i3g897i_1901021114057216857.pdf_1434692814287948830.pdf";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +78,7 @@ public class WebViewActivity extends AppCompatActivity {
         // 被JS调用的方法必须加入@JavascriptInterface注解
         @JavascriptInterface
         public void back() {
-            WebViewActivity.this.finish();
+//            WebViewActivity.this.finish();
         }
     }
     //下载具体操作
